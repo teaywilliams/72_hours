@@ -1,14 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
+const baseURL = 'https://api.nasa.gov/planetary/earth/assets';
+const key = 'pFFCDrM0PmIYvbh3w9sNhXiWfXpmSsw6jjae18bh';
+const lon = -85.88;
+const lat = 38.95;
+const date = "2020-05-06";
 
-const NasaImage = ({location}) => {
-    
-    return (
-        <div>
-            
-            NasaImage comp: {location?.longitude}
-        </div>
+const Nasa = () => {
+    // const [ lon, setLon ] = useState('');
+    // const [ lat, setLat ] = useState('');
+    const [ results, setResults ] = useState({}); 
+
+    useEffect (() => {
+        // const url= 'https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&dim=0.15&api_key=pFFCDrM0PmIYvbh3w9sNhXiWfXpmSsw6jjae18bh'
+        const url = `${baseURL}?lon=${lon}&lat=${lat}&date=${date}&dim=0.15&api_key=${key}`;
+        
+    fetch(url)
+    .then(res => res.json())
+    .then(json => 
+        setResults(json)  
     )
-}
+    .catch(err => console.log(err));
+    }, []);
 
-export default NasaImage;
+    console.log("RESULTS",results);
+   
+// fetchResults()
+
+    return (
+        <div className="main">
+            <div className="mainDiv">
+                <p>nasa test</p>
+                <img src={results.url} />
+                
+            </div>
+        </div>
+
+        
+    );
+};
+
+export default Nasa;
