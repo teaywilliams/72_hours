@@ -5,6 +5,7 @@ const NasaImage = ({location}) => {
     
     return (
         <div>
+            
             NasaImage comp: {location?.longitude}
         </div>
     )
