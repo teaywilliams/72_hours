@@ -14,6 +14,8 @@ function App() {
   const [location, setLocation] = useState()
   return ( 
     <div className="App">
+      <Weather/>
+      this is new
       <Location location={location} setLocation={setLocation} />
       {location?.longitude}
       {location?.latitude}

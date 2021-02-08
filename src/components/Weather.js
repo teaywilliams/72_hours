@@ -4,6 +4,7 @@ const Weather = ({location}) => {
         <div>
             Weather comp: {location?.longitude}
             testing
+            wow made some changes
         </div>
     )
 }
