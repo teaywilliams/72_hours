@@ -4,6 +4,8 @@ import './App.css';
 
 import Weather from './components/Weather'
 import Location from './components/Location'
+import Restaurant from './components/Restaurant';
+import NasaImage from './components/NasaImage';
 
 
 // Defining our <App /> component the function name matches the file name
@@ -17,6 +19,8 @@ function App() {
       <Location location={location} setLocation={setLocation} />
       {location?.longitude}
       {location?.latitude}
+      <NasaImage location={location}/>
+      <Restaurant location={location}/>
       <Weather location={location}/>
     </div>
   );
