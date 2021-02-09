@@ -13,15 +13,17 @@ const Restaurants =  ({location}) => {
     background-image: url(${Restaurantpic});
     width: 100vw;
     background-repeat: no-repeat;
+    background-size: cover;
     `;
     
     const Text = styled.div`
         position: relative;
-        left: 20vw;
+        text-align: right;
+        // left: 20vw;
         font-weight: bold;
         font-size: 30px;
         color: white;
-        
+        padding-right:200px;
         padding-top: 150px;
         padding-bottom: 150px;
         
