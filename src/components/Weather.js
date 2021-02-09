@@ -23,6 +23,7 @@ const Bkgrnd = styled.div`
   height: 800px;
   width: 100vw;
   background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const Littlepic = styled.img`

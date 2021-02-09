@@ -20,6 +20,7 @@ background-image: url(${Nasapic});
 height: 1000px;
 width: 100vw;
 background-repeat: no-repeat;
+background-size: cover;
    
     `;
     const Header = styled.h2`
