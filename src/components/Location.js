@@ -1,6 +1,10 @@
 import React, {useEffect} from "react";
+import styled from 'styled-components'
 
 const Location = ({location, setLocation}) => {
+    const Header = styled.h2`
+        font-size: 50px;
+        `;
     useEffect(()=> {
         navigator.geolocation.getCurrentPosition((position) => {
             console.log("Latitude is :", position.coords.latitude);
@@ -15,7 +19,7 @@ const Location = ({location, setLocation}) => {
     },[])
     return (
         <div>
-            <h1>Using Geolocation JavaScript API in React</h1>
+            <Header>Using Geolocation JavaScript API in React</Header>
             <br />
         </div>
     )
