@@ -26,7 +26,6 @@ const Restaurants =  ({location}) => {
         padding-right:200px;
         padding-top: 150px;
         padding-bottom: 150px;
-        
         `;
     const Header = styled.h2`
         font-size: 40px;
