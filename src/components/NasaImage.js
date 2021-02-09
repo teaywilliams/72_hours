@@ -12,13 +12,20 @@ const Image = styled.img`
     border: 5px solid #3c3592;
     position: relative;
     right: 320px;
-    bottom: 670px;
+    top: 200px;
 
     `;
-const Magnify = styled.img`
-    width: 100%; 
+const Astronaut = styled.div`
+background-image: url(${Nasapic});
+height: 1000px;
+width: 100vw;
+background-repeat: no-repeat;
    
     `;
+    const Header = styled.h2`
+        font-size: 40px;
+        padding-top: 30px;
+        `;
 
 const Nasa = () => {
 
@@ -43,15 +50,13 @@ const Nasa = () => {
     
     return (
         <div className="main">
-            <div className="mainDiv">
-                <h4>Astronaut View Cam:</h4>
-               <Magnify src={Nasapic} />
-               <Image src={results.url} style={{width: "400px"}} />
-               
-                
+            <Astronaut className="mainDiv">
+                <Header>Astronaut View Cam:</Header>
+               {/* <Magnify src={Nasapic} /> */}
+               <Image src={results.url} style={{width: "400px"}} />              
                          
                 
-            </div>
+            </Astronaut>
         </div>
 
         
