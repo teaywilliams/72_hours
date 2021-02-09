@@ -20,8 +20,7 @@ const Restaurants =  ({location}) => {
         left: 20vw;
         font-weight: bold;
         font-size: 30px;
-        color: white;
-        
+        color: white;        
         padding-top: 150px;
         padding-bottom: 150px;
         

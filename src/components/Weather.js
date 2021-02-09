@@ -9,13 +9,10 @@ const key = "d7ae70b412dfeecd253828278594b5e3";
 const Text = styled.div`
   position: relative;
   left: 65vw;
- 
-
   font-size: 30px;
 `;
 const Header = styled.h2`
-  font-size: 40px;
-  
+  font-size: 40px;  
 `;
 
 const Bkgrnd = styled.div`
