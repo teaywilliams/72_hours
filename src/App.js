@@ -17,8 +17,13 @@ function App() {
   return ( 
     <div className="App">
       <Location location={location} setLocation={setLocation} />
-      {location?.longitude}
-      {location?.latitude}
+      <p>
+      Longitude: {location?.longitude}
+      </p>     
+      <p>
+      Latitude: {location?.latitude}
+      </p>
+      <br />
       <NasaImage location={location}/>
       <Restaurants location={location}/>
       {/*<Restaurants long={location.longitude} lat={location.latitude} /> */}
