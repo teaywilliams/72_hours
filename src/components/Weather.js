@@ -1,8 +1,26 @@
 import React, {useState, useEffect} from "react";
+import styled from 'styled-components';
+import Weatherpic from './assets/weatherpic.jpg';
 // const lat = "39.9679389";
 // const long = "-86.12427819999999";
 
 const key = "d7ae70b412dfeecd253828278594b5e3";
+const Image = styled.img`
+    width: 100%;
+    
+    background-size: cover;
+    
+    `;
+const Text = styled.div`
+    position: relative;
+    bottom: 800px;
+    left: 1000px;
+    font-size: 30px;
+    `;
+    const Header = styled.h2`
+    font-size: 40px;
+    `;
+
 
 const Weather = () => {
     const [city, setCity] = useState("");
@@ -81,26 +99,28 @@ const Weather = () => {
                 alt="weather img"
             />
         </div>
-        <div className="col-12 text-justify">
-            <h2>
+        <Image src={Weatherpic} />
+        <Text className="col-12 text-justify">
+            <Header>
                 {city}, {country}
-            </h2>
+            </Header>
+            <br />
             <p>
-                <b>Current condition:</b> '{description}'
+                <b>Current condition: </b> '{description}'
             </p>
             <p>
-                <b> Temperature:</b>
+                <b> Temperature: </b>
                 {temperature} {degrees}
             </p>
             <p>
-                <b> Wind Speed:</b>
+                <b> Wind Speed: </b>
                 {wind}
             </p>
             <p>
-                <b> Clouds:</b>
+                <b> Clouds: </b>
                 {clouds}
             </p>
-        </div>
+        </Text>
     </div>
     <button className="btn btn-primary mb-2" onClick={handleClick}>
         {button}

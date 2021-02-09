@@ -15,7 +15,8 @@ const Location = ({location, setLocation}) => {
     },[])
     return (
         <div>
-            <h4>Using geolocation JavaScript API in React</h4>
+            <h1>Using Geolocation JavaScript API in React</h1>
+            <br />
         </div>
     )
 }
