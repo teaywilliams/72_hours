@@ -25,8 +25,10 @@ function App() {
       </p>
       <br />
       <NasaImage location={location}/>
+      <br />
       <Restaurants location={location}/>
       {/*<Restaurants long={location.longitude} lat={location.latitude} /> */}
+      <br />
       <Weather location={location}/>
     </div>
   );

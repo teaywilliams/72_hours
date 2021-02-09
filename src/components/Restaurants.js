@@ -8,23 +8,27 @@ import Restaurantpic from './assets/restaurantpic.jpg';
 const Restaurants =  ({location}) => {
     const key = "e6f396e0ab6bc80f5f9bc483871ad02a"
     const [restaurants, setRestaurants] = useState([]);
-    const Image = styled.img`
-        width: 100%;
-        position: relative;
-        
-        `;
+
+    const Bkgrnd = styled.div`
+    background-image: url(${Restaurantpic});
+    width: 100vw;
+    background-repeat: no-repeat;
+    `;
+    
     const Text = styled.div`
         position: relative;
-        bottom: 850px;
-        left: 350px;
+        left: 20vw;
         font-weight: bold;
         font-size: 30px;
         color: white;
+        
+        padding-top: 150px;
+        padding-bottom: 150px;
+        
         `;
     const Header = styled.h2`
         font-size: 40px;
         `;
-
 
     useEffect(() => {
         // fetch(`https://developers.zomato.com/api/v2.1/geocode?lat=39.779801&lon=-86.1394092&apikey=${key}`)
@@ -42,8 +46,8 @@ const Restaurants =  ({location}) => {
     
     return (
         
-        <div>
-            <Image src={Restaurantpic} />
+        <Bkgrnd>
+           
             <Text>
             <Header>Local Restaurants:</Header>
             <br />
@@ -51,8 +55,9 @@ const Restaurants =  ({location}) => {
                 rest => <RestDis
                     name={rest.restaurant.name}
                     id={rest.restaurant.id} />)}
-            </Text>            
-        </div>
+            </Text>  
+                       
+        </Bkgrnd>
         
     )
 }
